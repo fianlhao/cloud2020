@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.finalhao.springcloud.Dao.PaymentDao">
+
+    <insert id="save" parameterType="com.finalhao.Payment" useGeneratedKeys="true" keyProperty="id">
+        insert into payment (serial) values (#{serial})
+    </insert>
+    <resultMap id="BaseMap" type="com.finalhao.Payment">
+        <id column="id" property="id" jdbcType="INTEGER"></id>
+        <id column="serial" property="serial" jdbcType="VARCHAR"></id>
+    </resultMap>
+    <select id="getPaymentById" parameterType="integer" resultMap="BaseMap">
+        select * from payment where id=#{id}
+    </select>
+
+</mapper>

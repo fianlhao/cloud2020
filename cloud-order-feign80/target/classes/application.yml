@@ -1,0 +1,18 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+#设置feign客户端超时时间
+ribbon:
+  #指的是建立连接所需要的时间，
+  ReadTimeOut: 5000
+  #指的是建立连接后从服务器到读取到可用资源的时间
+  ConnectTimeOut: 5000
+
+  logging:
+    level:
+      #feign日志监控的接口以及级别
+      com.finalhao.service.PaymentFeignService: debug
