@@ -17,6 +17,7 @@
       <module>cloud-order-feign80</module>
       <module>cloud-gateway-gateway9527</module>
       <module>redis-lock</module>
+      <module>system</module>
   </modules>
   <packaging>pom</packaging>
 
