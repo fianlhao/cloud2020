@@ -14,6 +14,10 @@ spring:
           uri: http://localhost:8001
           predicates:
             - Path=/payment/save
+        - id: system
+          uri: http://localhost:9001
+          predicates:
+            - Path=/system/**
 eureka:
   instance:
     hostname: could-gateway-service

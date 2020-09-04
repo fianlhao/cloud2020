@@ -18,6 +18,7 @@
       <module>cloud-gateway-gateway9527</module>
       <module>redis-lock</module>
       <module>system</module>
+    <module>server</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -104,6 +105,24 @@
           <fork>true</fork>
           <addResources>true</addResources>
         </configuration>
+      </plugin>
+      <!-- mybatis generator 自动生成代码插件     -->
+      <plugin>
+        <groupId>org.mybatis.generator</groupId>
+        <artifactId>mybatis-generator-core</artifactId>
+        <version>1.3.7</version>
+        <configuration>
+          <configurationFile>src/main/resources/generator/generatorConfig.xml</configurationFile>
+          <overwrite>true</overwrite>
+          <verbose>true</verbose>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.37</version>
+          </dependency>
+        </dependencies>
       </plugin>
     </plugins>
   </build>

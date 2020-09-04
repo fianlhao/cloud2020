@@ -18,7 +18,7 @@ import java.util.Date;
  * @author:hao.fang Email:
  * Description:
  */
-@Component
+//@Component
 @Slf4j
 public class MylogGatewayFilter implements GlobalFilter, Order {
     @Override
