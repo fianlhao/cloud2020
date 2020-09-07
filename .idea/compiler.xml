@@ -12,9 +12,11 @@
         <module name="cloud-eureka-server7001" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8001" />
-        <module name="cloud-gateway-gateway9527" />
+        <module name="system" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-order-feign80" />
+        <module name="cloud-gateway-gateway9527" />
+        <module name="server" />
         <module name="cloud-common-api" />
       </profile>
     </annotationProcessing>

@@ -22,4 +22,5 @@ public class TestController {
     public List<Test> queryById(@PathVariable("id") String id) {
         return testService.queryById(id);
     }
+
 }
